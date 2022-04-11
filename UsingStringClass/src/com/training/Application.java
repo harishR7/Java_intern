@@ -8,7 +8,7 @@ public class Application {
 		StringService service=new StringService();
 		
 		
-		int key=13;
+		int key=9;
 		switch (key) {
 		case 1:
 			service.stringEquals("ram", "ram");
@@ -34,7 +34,7 @@ public class Application {
 			service.usingConcat("Hello", " Chennai");
 			break;
 		case 9:
-			service.usingCompareTo("Ram", "Ram");
+			service.usingCompareTo("Ram", "ani");
 			break;
 		case 10:
 			service.usingStringFormat("Ramesh", 43.5432);
