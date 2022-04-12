@@ -24,6 +24,8 @@ public class HashMapApplication {
 		
 		System.out.println(map.get(902));
 		System.out.println(map.get(904));
+		
 	}
+	
 
 }
