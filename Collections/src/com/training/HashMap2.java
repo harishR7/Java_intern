@@ -3,6 +3,7 @@ package com.training;
 import java.util.Collection;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class HashMap2 {
@@ -26,12 +27,20 @@ public class HashMap2 {
 	    Set<Integer> keys=map.keySet();
 	   // System.out.println(keys);
 	    for(Integer key:keys) {
+	
 	    	System.out.println(map.get(key));
 	    }
-	    
+	    System.out.println("printing only value");
 	    Collection<Student>list=map.values();
 	    for(Student eachStudent:list) {
 	    	System.out.println(eachStudent);
+	    }
+	    
+	    System.out.println("Both key and value");
+	    Set<Map.Entry<Integer, Student>>list1=map.entrySet();
+	    for(Map.Entry<Integer, Student> map1:list1) {
+	    	System.out.println(map1.getKey());
+	    	System.out.println(map1.getValue());
 	    }
 	    
 	    
