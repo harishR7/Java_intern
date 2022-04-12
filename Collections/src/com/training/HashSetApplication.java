@@ -24,6 +24,7 @@ public class HashSetApplication {
 			System.out.println(eachValue.getFirstName());
 		}
 		System.out.println(set.size());
+		System.out.println(ram);
 		
 		
 		
