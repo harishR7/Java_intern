@@ -15,9 +15,10 @@ public class HashSetApplication {
 	Set<Student> set=new HashSet<>();
 		
 		set.add(chinnaMagesh);
-		set.add(magesh);
+		
 		set.add(shyam);
 		set.add(ram);
+		set.add(magesh);
 		for(Student eachValue:set) {
 		//System.out.println(eachValue);
 			System.out.println(eachValue.getFirstName());
