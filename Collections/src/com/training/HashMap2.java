@@ -18,24 +18,28 @@ public class HashMap2 {
 		
 		map.put(900, ram);
 	    map.put(902, shyam);
-	    map.put(904,mukesh);
+	    map.put(904,mukesh); 
 	    System.out.println(map.get(900));
 	    System.out.println(map.get(902));
 	    System.out.println(map.get(904));
 	    
-	    
+	    System.out.println("printing using key");
 	    Set<Integer> keys=map.keySet();
 	   // System.out.println(keys);
 	    for(Integer key:keys) {
 	
 	    	System.out.println(map.get(key));
 	    }
-	    System.out.println("printing only value");
+	    
+	    
+	    System.out.println("printing using value");
 	    Collection<Student>list=map.values();
 	    for(Student eachStudent:list) {
 	    	System.out.println(eachStudent);
 	    }
 	    
+	    
+	  
 	    System.out.println("Both key and value");
 	    Set<Map.Entry<Integer, Student>>list1=map.entrySet();
 	    for(Map.Entry<Integer, Student> map1:list1) {
