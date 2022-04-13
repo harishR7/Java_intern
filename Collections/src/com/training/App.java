@@ -55,6 +55,14 @@ public class App {
 		Collections.sort(list,new BookNameComparator());
 		System.out.println("Sort by Book Name");
 		print(list);
+		
+		
+		System.out.println("Greater than value ");
+		List<Book> bookLists=((BookService)service).getBookGrtThan(500);
+		bookLists.forEach(System.out::println);
+		
+		//System.out.println(((BookService)service).getBookGrtThan(20));
+		
 	}
 
 }
