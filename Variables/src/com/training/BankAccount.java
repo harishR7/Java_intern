@@ -22,12 +22,13 @@ public class BankAccount {
 		//local variable
 		//double updatedBalance;
 		// local variable
-		double currentBalance=0;
+		double currentBalance;
 		this.balance=this.balance+amount;
 		
 		//local variable should be initialized before using
 		//System.out.println(updatedBalance);
 		return this.balance;
+
 	}
 
 	public BankAccount() {
