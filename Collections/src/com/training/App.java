@@ -51,7 +51,7 @@ public class App {
 		print(list);
 		
 		
-		
+		System.out.println("using comparator");
 		Collections.sort(list,new BookNameComparator());
 		System.out.println("Sort by Book Name");
 		print(list);

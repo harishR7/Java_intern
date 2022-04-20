@@ -45,6 +45,7 @@ public class Application {
 		service.remove(python);
 		
 		// printing the size of the List<book> using size() method
+		
 		System.out.println(service.findAll().size());
 		
 		
@@ -54,7 +55,7 @@ public class Application {
 //		for(Book eachBook : bookList1) {
 //			System.out.println(eachBook);
 //		}
-		
+		System.out.println("find all");
 		print(service.findAll());
 		
 		

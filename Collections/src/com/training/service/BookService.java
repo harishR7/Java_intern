@@ -51,7 +51,7 @@ public class BookService implements CrudRepository {
 	@Override
 	public List<Book> findAll() {
 		// TODO Auto-generated method stub
-		return this.bookList;
+		return bookList;
 	}
 
 

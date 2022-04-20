@@ -17,8 +17,9 @@ public class HashSetApplication {
 		set.add(chinnaMagesh);
 		
 		set.add(shyam);
-		set.add(ram);
 		set.add(magesh);
+		set.add(ram);
+		
 		for(Student eachValue:set) {
 		//System.out.println(eachValue);
 			System.out.println(eachValue.getFirstName());

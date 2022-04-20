@@ -8,7 +8,7 @@ public class Application {
 		StringService service=new StringService();
 		
 		
-		int key=9;
+		int key=1;
 		switch (key) {
 		case 1:
 			service.stringEquals("ram", "ram");
