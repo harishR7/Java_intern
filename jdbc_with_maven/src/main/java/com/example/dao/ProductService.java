@@ -2,9 +2,10 @@ package com.example.dao;
 import java.sql.*;
 import java.util.*;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.PreAction;
+
 
 import com.example.entity.*;
+
 
 public class ProductService {
 	
@@ -139,6 +140,79 @@ public class ProductService {
 		}
 		
 		return rowUpdate;
+	}
+	
+	
+	public void usingtxn(Product prd1,Product prd2) {
+		String sql="insert into harish_product values(?,?,?)";
+		
+		try(PreparedStatement loanpstmt=con.prepareStatement(sql)){
+			
+			con.setAutoCommit(false);
+			loanpstmt.setInt(1, prd1.getProductId());
+			loanpstmt.setString(2, prd1.getProductName());
+			loanpstmt.setDouble(3, prd1.getPrice());
+			
+			int rowAdded=loanpstmt.executeUpdate();
+			loanpstmt.setInt(1, prd2.getProductId());
+			loanpstmt.setString(2, prd2.getProductName());
+			loanpstmt.setDouble(3, prd2.getPrice());
+			int rowAdded2=loanpstmt.executeUpdate();
+			
+			if(prd2.getPrice()>prd1.getPrice()) {
+				con.commit();
+			}
+			else {
+				con.rollback();
+			}
+			
+			
+			System.out.println("Row Add="+rowAdded+","+rowAdded2);
+			
+		}
+		
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void usingtxnWithCatchException(Product prd1,Invoice invoice) {
+		String prosql="insert into harish_product values(?,?,?)";
+		String invoicesql="insert into harish_invoice values(?,?,?,?)";
+		
+		try(PreparedStatement propstmt=con.prepareStatement(prosql);
+				PreparedStatement invoicepstmt=con.prepareStatement(invoicesql)
+				){
+			
+			con.setAutoCommit(false);
+			propstmt.setInt(1, prd1.getProductId());
+			propstmt.setString(2, prd1.getProductName());
+			propstmt.setDouble(3, prd1.getPrice());
+			
+			int rowAdded=propstmt.executeUpdate();
+			invoicepstmt.setInt(1, invoice.getInvoiceNumber());
+			invoicepstmt.setString(2, invoice.getInvoiceCusName());
+			invoicepstmt.setInt(3, invoice.getQuality());
+			invoicepstmt.setInt(4, invoice.getProductRef());
+			int rowAdded2=invoicepstmt.executeUpdate();
+			
+			con.commit();
+			
+			System.out.println("Row Add="+rowAdded+","+rowAdded2);
+			
+		}
+		
+		catch(SQLException e) {
+			e.printStackTrace();
+			
+			try {
+				con.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
 	}
 	
 }
