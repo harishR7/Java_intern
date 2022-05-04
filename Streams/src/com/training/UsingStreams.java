@@ -29,8 +29,8 @@ public class UsingStreams {
 //		Set<Book> bookset=bookList.stream().collect(toSet());
 		Map<String,Double> values=
 				//bookset.stream()
-				bookList.stream()
-				.filter(e -> e.getPrice()>500).distinct()
+				bookList.parallelStream().
+				filter(e -> e.getPrice()>500).distinct()
 				.collect(toMap(Book:: getBookName,Book ::getPrice));
 				
 		values.forEach((key,value) -> System.out.println(key +","+value));
