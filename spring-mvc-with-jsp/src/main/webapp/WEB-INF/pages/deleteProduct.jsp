@@ -8,6 +8,7 @@
 </head>
 <body>
 ${delete }
+${delete1 }
 <h1> deleted </h1>
 
 </body>

@@ -33,7 +33,8 @@ public class ProductController {
 		int rowAdded;
 		try {
 			rowAdded=this.repo.add(entity);
-			return "success";
+			//return "success";
+			return "addProduct";
 		} catch (Exception e) {
 			// TODO: handle exception
 			return "failure";
@@ -65,8 +66,15 @@ public class ProductController {
 		
 		Product pro=this.repo.findbyId(id);
 		model.addAttribute("delete",pro);
-		return "deleteSuccess";
+		model.addAttribute("delete1",repo.delete(id));
+		return "deleteProduct";
 	
 	
 }
+	@RequestMapping(value="/",method = RequestMethod.GET)
+	public String indexPath (Model model) {
+		model.addAttribute("title","IndexPath");
+	
+		return "indexPath";
+	}
 }

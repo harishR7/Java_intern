@@ -9,7 +9,7 @@
 </head>
 <body>
 ${title}
-<form:form method="post" >
+<form:form method="post">
 <lable>ProductId</lable>
 <input type="number" name="id">
 <input type="submit" value="delete">
