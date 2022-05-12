@@ -35,4 +35,10 @@ public class EmployeeService {
 		return this.repo.findByLocationAndSkillset(location, skill);
 	}
 	
+	
+	public List<Employee> findByLocationOrSkillset(String location,String skill){ 
+		
+		return this.repo.findByLocationOrSkillset(location, skill);
+	}
+	
 }

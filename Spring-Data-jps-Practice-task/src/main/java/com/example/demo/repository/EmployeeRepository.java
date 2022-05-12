@@ -20,4 +20,7 @@ public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 	
 	@Query(nativeQuery = true,value="select * from harish_employee1 where location=:loc and skillset=:skill")
 	public List<Employee> findByLocationAndSkillset(@Param("loc")String location,@Param("skill")String skill);
+
+    public List<Employee> findByLocationOrSkillset(String location,String skill);
 }
+

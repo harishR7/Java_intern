@@ -26,7 +26,7 @@ public class SpringDataJpsPracticeTaskApplication {
 		
 		
 		
-		int num=5;
+		int num=6;
 		switch(num) {
 		case 1:
 			// adding employee data
@@ -46,6 +46,11 @@ public class SpringDataJpsPracticeTaskApplication {
 		case 5:
 			//findByLocationAndSkillset
 			service.findByLocationAndSkillset("Chennai", "Java").forEach(System.out::println);
+			break;
+		case 6:
+			//findByLocationOrSkillset
+			service.findByLocationOrSkillset("Chennai", "Python").forEach(System.out::println);
+			break;	
 		}
 		
 	}
