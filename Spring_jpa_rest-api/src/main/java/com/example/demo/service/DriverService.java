@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Driver;
@@ -53,6 +54,35 @@ public class DriverService {
 		}
 		return entity;
 	}
+	
+	public List<Driver>findByDriverName(String srcname){
+		return this.repo.findByDriverName(srcname);
+	}
+	
+	public List<Driver> findByPhoneNumber(long number){
+		return this.repo.findByPhoneNumber(number);
+	}
+//	public List<Driver> findByPhoneNumber1(long number){
+//		
+//		List<Driver>list=;
+//		if() {
+//		 }
+//		 else {
+//			 throw new NoSuchElementException("Not present");
+//		 }
+//	}
+//	
+    public List<Driver> searchByRate(double rate){
+    	return this.repo.searchByRate(rate);
+    }
+    
+    public int updateRating(int id,double updateRate) {
+    	return this.repo.modifyRating(id, updateRate);
+    }
+    
+    public List<Driver> sortedList(String proName){
+    	return this.repo.findAll(Sort.by(proName));
+    }
 }
 	
 
