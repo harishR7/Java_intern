@@ -1,0 +1,17 @@
+server:
+  port: 8770
+  
+  
+eureka:
+  client:  
+    fetch-registry: false 
+    register-with-eurka: false
+    service-url:
+      defaultZone: http://localhost:8770/eureka
+      
+management:    
+  endpoints:
+    web:
+      exposure:
+        include:
+         - "*"

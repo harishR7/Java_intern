@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: micro-service2
+
+server:
+  port: 6060
+  
+  
+eureka:
+  client:  
+    fetch-registry: true 
+    register-with-eurka: true
+    service-url:
+      defaultZone: http://localhost:8770/eureka
+      
+management:    
+  endpoints:
+    web:
+      exposure:
+        include:
+         - "*"
