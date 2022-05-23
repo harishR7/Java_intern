@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/harishR7/spring-cloud-config.git
+          search-paths:
+          - '{application}'
+
+          
+management:
+   endpoints:
+      web:
+        exposure:
+          include:
+            - "*"
