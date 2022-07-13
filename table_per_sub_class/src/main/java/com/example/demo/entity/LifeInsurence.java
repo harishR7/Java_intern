@@ -33,7 +33,5 @@ public class LifeInsurence extends Insurance{
 		return "LifeInsurence [age=" + age + ", profile=" + profile + ", getPolicyNumber()=" + getPolicyNumber()
 				+ ", getPolicyHolderName()=" + getPolicyHolderName() + "]";
 	}
-	
-	
-	
+
 }

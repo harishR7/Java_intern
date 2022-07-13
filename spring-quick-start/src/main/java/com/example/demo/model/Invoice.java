@@ -23,6 +23,7 @@ public class Invoice {
 		super();
 		this.customer=customer;
 		this.product=product;
+		
 	}
 	
 }

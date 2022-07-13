@@ -10,9 +10,9 @@ import com.example.demo.entity.Address;
 
 public interface AddressRepository extends JpaRepository<Address, Integer> {
 	
-//	@EntityGraph(attributePaths = {"user","city"} ,type = EntityGraph.EntityGraphType.LOAD)
-//	List<Address>findAll();
-	
-	@EntityGraph(attributePaths = {"user"} ,type = EntityGraph.EntityGraphType.FETCH)
+	@EntityGraph(attributePaths = {"user","city"} ,type = EntityGraph.EntityGraphType.LOAD)
 	List<Address>findAll();
+	
+	//@EntityGraph(attributePaths = {"user"} ,type = EntityGraph.EntityGraphType.FETCH)
+	//List<Address>findAll();
 }

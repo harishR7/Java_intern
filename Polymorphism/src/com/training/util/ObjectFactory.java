@@ -15,9 +15,10 @@ public class ObjectFactory {
 			return new Student(89);
 			default:
 				return null;
+		
 		}
 	}
-	public double getValue(  Conditional  obj,Object value) {
+	public double getValue(Conditional  obj,Object value) {
 		// Here obj refernce type is Conditional but objects;
 		//are Student or professor or principal
 		//at runtime test method in the respective object is called

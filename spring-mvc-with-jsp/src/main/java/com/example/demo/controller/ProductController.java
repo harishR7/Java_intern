@@ -44,7 +44,7 @@ public class ProductController {
 	public String searchForm (Model model) {
 		model.addAttribute("title","Search Products");
 	
-		return "searchProduct";
+		return "searchProduct"  ;
 	}
 	@RequestMapping(value="/product/search",method = RequestMethod.POST)
 	public String submitSearchForm (@RequestParam("id") int id,Model model) {

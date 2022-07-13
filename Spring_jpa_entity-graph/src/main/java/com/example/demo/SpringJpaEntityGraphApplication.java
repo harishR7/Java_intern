@@ -24,7 +24,7 @@ public class SpringJpaEntityGraphApplication {
 		service.task2();
 		ctx.close();
 		
-	}
+	}   
 
 	@Bean
 	public CommandLineRunner runner() {

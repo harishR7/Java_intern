@@ -23,16 +23,20 @@ public class Application {
 	//	System.out.print("Mark Scored="+ram.getMarkScored());
 	//	System.out.print("Student Name="+ram.getFirstName());
 		
-		Student shyam =new Student(43,"ramn",76,"mech");
-		System.out.println("Student Name="+shyam.getFirstName());
+		Student deeps=new Student();
+		Student shyam =new Student(43,"ramn",76,"mech");                                                                                 
+		//System.out.println("Student Name="+shyam.getFirstName());
 		
 		
 		
 		
-		Student raven=new Student(998,"Sudha","texttile");
-		System.out.print("Roll Number= "+raven.getRollNumber());
+	//	Student raven=new Student(998,"Sudha","texttile");
+	//	System.out.print("Roll Number= "+raven.getRollNumber());
 			
-			System.out.print("Student Name="+raven.getFirstName());
-	}
+		//	System.out.print("Student Name="+raven.getFirstName());
+	//		
+			
+			//System.out.println(deeps.toString());
+	}//
 
 }

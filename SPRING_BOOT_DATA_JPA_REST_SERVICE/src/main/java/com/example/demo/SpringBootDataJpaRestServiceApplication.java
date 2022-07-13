@@ -21,7 +21,7 @@ import com.example.demo.iface.PassengerRepository;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 @OpenAPIDefinition(info= @Info (title = "Passenger Service API",version = "1.0"))
-@SpringBootApplication
+@SpringBootApplication          
 public class SpringBootDataJpaRestServiceApplication {
 
 	public static void main(String[] args) {

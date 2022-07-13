@@ -22,7 +22,7 @@ public class SpringDataJpsOneToManyBidirectionalApplication {
 		
 		
 		
-		int num=3;
+		int num=2;
 		switch(num) {
 		case 1:
 			// adding rows
@@ -47,7 +47,7 @@ public class SpringDataJpsOneToManyBidirectionalApplication {
 
 
 	@Bean
-	public com.example.demo.enitity.bidirection.Doctor munna() {
+	public Doctor munna() {
 		
 		Doctor doc=new Doctor();
 		doc.setDoctorId(101);

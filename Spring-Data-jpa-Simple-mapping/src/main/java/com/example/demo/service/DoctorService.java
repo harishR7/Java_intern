@@ -11,6 +11,7 @@ import com.example.demo.repo.DoctorRepository;
 @Service
 public class DoctorService {
 
+	
 	private DoctorRepository repo;
 
 	

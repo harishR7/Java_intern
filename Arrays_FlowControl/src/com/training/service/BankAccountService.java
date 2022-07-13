@@ -2,6 +2,7 @@ package com.training.service;
 
 import com.training.model.BankAccount;
 
+
 public class BankAccountService {
 	
 	public double calculateInterest(BankAccount account) {
