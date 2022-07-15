@@ -5,7 +5,7 @@ spring:
     password: HR
     
   application:
-     name: cab-driver-service
+     name: trip-detail-service
   
   jpa:
     hibernate: 
@@ -17,6 +17,6 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka    
+      defaultZone: http://localhost:8761/eureka 
 server:
-   port: 6067  
+   port: 8090       
