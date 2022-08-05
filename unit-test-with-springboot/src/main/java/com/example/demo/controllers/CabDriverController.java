@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -39,11 +40,18 @@ public class CabDriverController {
 		
 	}
 	
+
 	@PostMapping
-	public CabDriver add(@RequestBody CabDriver entity) {
-		return this.service.save(entity);
-		
+	public ResponseEntity<CabDriver> add(@RequestBody CabDriver entity){
+
+	CabDriver driver = this.service.save(entity);
+
+	return ResponseEntity.status(HttpStatus.CREATED).body(driver);
+
 	}
+
+	
+
 	
 	@GetMapping
 	public List<CabDriver> findAll(){

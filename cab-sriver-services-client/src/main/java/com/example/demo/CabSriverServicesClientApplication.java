@@ -17,19 +17,7 @@ public class CabSriverServicesClientApplication {
 	@Bean
 	@LoadBalanced
 	public RestTemplate template() {
-		return new RestTemplate();
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+		return new RestTemplate();		
 				
 	}
 
